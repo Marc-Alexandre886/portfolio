@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/style.css">
+	<link rel="icon" type="image/png" href="/images/ST-EX.png">
+	<title>Robot - St-Ex</title>
+</head>
+<body>
+	<script>
+		var section_index = 2;
+	</script>
+	<div class="transition"></div>
+	<script src="/transition.js"></script>
+	<nav id="navbar"></nav>
+	<script src="/fr/navbar.js"></script>
+	<main class="content_container">
+		<h1>Le robot</h1>
+		<p>Document interne — ne pas diffuser en dehors de l'<b>Industrie Créative</b>.</p>
+		<hr>
+		<h2>Processus de conception</h2>
+		<p>
+			La conception du robot a commencé dans l'autobus en revenant du lancement de TakTik 2025. L'industrie Créative a établi plusieurs choses :
+		</p>
+		<ol>
+			<li>Un système de ramassage des PJ est nécessaire ;</li>
+			<li>Ce même système doit pouvoir placer des PJ dans les stations ;</li>
+			<li>Il faut que le robot puisse entreposer 3 PJ à la fois ;</li>
+			<li>Le robot doit pouvoir lancer des PJ sur le poteau central.</li>
+		</ol>
+		<p>
+			Nous nous sommes mis d'accord sur le fait qu'une pince serait la manière la plus simple de ramasser des PJ et de les placer dans des stations. De plus, une pince à 3 étages nous permettrait d'entreposer 3 PJ à la fois et de toutes les placer dans une station en même temps !
+		</p>
+		<img src="/images/pince.jpg" alt="Image d'un dessin d'un concept de pince">
+		<p>
+			Cependant, nous n'avions encore trouvé aucun moyen de lancer des PJ dans l'aire de curling. Après une rapide recherche, nous avons découvert que les lanceurs de frisbee font tourner une roue pour propulser les disques. Nous nous sommes inspirés de ce concept pour notre prototype de pince.
+		</p>
+		<p>
+			Seulement quelques jours après le lancement, nous avons fait une découverte : les limites d'extension des robots sont presque assez grandes pour permettre à un bras d'atteindre le poteau central… cela signifie que nous pourrions facilement lancer des PJ sur le poteau central avec peu de mauvais lancers ! Nous avons alors décidé de baser notre robot en entier sur cette stratégie.
+		</p>
+		<p>
+			C'est à ce moment-là qu'est survenu notre premier problème : afin d'avoir un bras assez long pour se rapprocher au maximum du poteau central, il faut une base petite, mais lourde, un bras très léger… et un moteur se trouvant au bout du bras, dans la pince, serait très lourd ! Plusieurs solutions s'offraient à nous :
+		</p>
+		<ul>
+			<li>Renforcer le bras et alourdir la base afin d'installer un moteur de puissance sur la pince (le bras pourrait-il supporter ce poids ?) ;</li>
+			<li>Remplacer le moteur de puissance par un servomoteur plus léger avec un système d'augmentation de vitesse (le servomoteur tournerait-il assez vite ?) ;</li>
+			<li>Placer le moteur sur la base du robot et transmettre la rotation à une roue située dans la pince (mais comment ?) ; </li>
+			<li>Ou alors oublier le système de « lanceur de frisbee » et le remplacer par un système à ressort ou élastique (serait-ce possible à faire sans endommager les PJ et sans casser le bras avec le mouvement créé par le déclenchement du ressort ?).</li>
+		</ul>
+		<p>
+			Au moment de l'écriture de cet article, nous n'avons toujours pas trouvé de solution.
+		</p>
+		<h2>Version finale du robot</h2>
+		<p>
+			Le robot n'étant toujours pas construit, les concepts expliqués dans cette section pourraient changer d'ici à la compétition.
+		</p>
+		<p>
+			La base roule grâce à des roues mecanum qui permettent des mouvements omnidirectionnels. Elle est petite, lourde et solide pour pouvoir rester stable lors de l'extension du bras.
+		</p>
+		<img src="/images/IMG_0710.jpg" alt="Photo d'un de nos prototypes de robot">
+		<p>
+			Le bras est composé de plusieurs parties résistantes et légères imprimées en 3D qui sont reliées par des servomoteurs servant d'articulations.
+		</p>
+		<p>
+			Au bout du bras se trouve une pince capable de ramasser 3 PJ à la fois. Elle est articulée grâce à des servomoteurs. Étant donné qu'elle ne couvre pas le trou des PJ, elle permet de facilement les déposer dans des stations. Elle est également munie d'un moteur tournant à assez grande vitesse pour propulser la PJ de l'étage du bas vers le poteau central.
+		</p>
+		<img src="/images/IMG_0711.jpg" alt="Photo d'un de nos prototypes de robot">
+	</main>
+</body>
+</html>

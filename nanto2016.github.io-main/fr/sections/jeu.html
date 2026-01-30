@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/style.css">
+	<link rel="icon" type="image/png" href="/images/ST-EX.png">
+	<title>Jeu - St-Ex</title>
+</head>
+<body>
+	<script>
+		var section_index = 1;
+	</script>
+	<div class="transition"></div>
+	<script src="/transition.js"></script>
+	<nav id="navbar"></nav>
+	<script src="/fr/navbar.js"></script>
+	<main class="content_container">
+		<h1>Description du jeu</h1>
+		<p>
+			Le jeu de cette année consiste, dans les grandes lignes, à prendre des disques en forme de beigne (appelés PJ) et à les placer dans des « stations » pour gagner des points.
+		</p>
+		<p>
+			Il y a deux équipes : les bleus et les jaunes, chacune étant composée de deux robots.
+		</p>
+		<p>
+			Les PJ se trouvent dans des distributeurs accessibles aux robots. Chaque station est unique dans la manière dont elle donne des points et dans la manière dont elle est « contrôlée ».
+		</p>
+		<details class="nice_border">
+			<summary>Contrôle des stations</summary>
+			<p>
+				Chaque station peut être contrôlée par une équipe, dépendamment des PJ qui y sont placées. Contrôler des stations peut être un avantage qui change complètement la donne — <i>mais il faut être stratégique.</i>
+			</p>
+			<p>
+				Le terrain est composé d'un ensemble de 9 stations formant une grille de tic-tac-toe. Contrôler 3 stations dans une ligne horizontale, verticale ou diagonale multiplie les points de ces stations pour l'équipe les contrôlant.
+			</p>
+			<p>
+				Pour mieux comprendre les « Multiplicateurs TakTik-Toe », veuillez vous référer à <a href="/fr/sections/jeu.html#godot">l'explication interactive du jeu</a>.
+			</p>
+		</details>
+		<p>
+			Il y a 4 types de stations :
+		</p>
+		<ul>
+			<li>Le poteau ;</li>
+			<li>Le poteau inversé ;</li>
+			<li>Le poteau horizontal ;</li>
+			<li>Et l'aire de curling.</li>
+		</ul>
+		<p>
+			Pour mieux comprendre les différents types de stations, veuillez vous référer à <a href="/fr/sections/jeu.html#godot">l'explication interactive du jeu</a>.
+		</p>
+		<p>
+			Malheureusement, l'explication interactive ne couvre pas l'aire de curling.
+		</p>
+		<details class="nice_border details_with_images">
+			<summary>Aire de curling</summary>
+			<div>
+				<div class="text_with_image_sidebar">
+					<p>
+						L'aire de curling est à la fois la station la plus unique, la plus difficile à atteindre et la plus <i>payante</i>.
+					</p>
+					<p>
+						Elle est composée de 4 carrés concentriques et d'un poteau situé en son centre. Les robots ne sont pas autorisés à y entrer.
+					</p>
+					<p>
+						Les PJ lancées dans une des zones valent un certain nombre de points selon la zone : le plus près du centre, le plus de points. La première PJ lancée sur le poteau central vaut <b>500 POINTS !!!</b> Les suivantes valent de moins en moins de points : 400, 300, 200… jusqu'à 0.
+					</p>
+					<p>
+						L'aire de curling est contrôlée par l'équipe ayant le plus de PJ dans la zone ayant au moins une PJ la plus près du centre. Par exemple, si les jaunes on 5 PJ dans la zone de 10 points et que les bleus ont 1 PJ sur le poteau central, les bleus contrôlent l'aire de curling. En cas d'égalité, personne ne la contrôle.
+					</p>
+				</div>
+				<aside class="sidebar_image">
+					<img src="/images/curling.png" alt="Aire de curling">
+					<img src="/images/curling control.png" alt="Exemple de contrôle de l'aire de curling">
+				</aside>
+			</div>
+		</details>
+		<p>
+			Voici une explication intéractive du jeu de TakTik 2025 qui, nous l'espérons, vous aidera à mieux comprendre le jeu de l'année.
+		</p>
+		<a id="godot" class="button_with_arrow" onclick="transition('../godot/godot.html?transition_direction=normal');">
+			Explication intéractive du jeu
+			<span class="arrow">></span>
+		</a>
+	</main>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/style.css">
+	<link rel="icon" type="image/png" href="/images/ST-EX.png">
+	<title>Game - St-Ex</title>
+</head>
+<body>
+	<script>
+		var section_index = 1;
+	</script>
+	<div class="transition"></div>
+	<script src="/transition.js"></script>
+	<nav id="navbar"></nav>
+	<script src="/en/navbar.js"></script>
+	<main class="content_container">
+		<h1>Game Description</h1>
+		<p>
+			This year's game involves taking donut-shaped discs (called GPs) and placing them in “stations” to earn points.
+		</p>
+		<p>
+			There are two teams: blue and yellow, each made up of two robots.
+		</p>
+		<p>
+			The GPs are located in dispensers that the robots can access. Each station is unique in how it awards points and how it can be “controlled.”
+		</p>
+		<details class="nice_border">
+			<summary>Controlling the Stations</summary>
+			<p>
+				Each station can be controlled by a team based on the GPs placed there. Controlling stations can give a team a significant advantage, <i>but strategy is essential</i>.
+			</p>
+			<p>
+				The playing field is made up of 9 stations arranged in a tic-tac-toe grid. Controlling 3 stations in a horizontal, vertical, or diagonal line multiplies the points earned from those stations for the controlling team.
+			</p>
+			<p>
+				To better understand the "TakTik Toe Multipliers," check out the <a href="/en/sections/game.html#godot">interactive explanation of the game</a>.
+			</p>
+		</details>
+		<p>
+			There are 4 types of stations:
+		</p>
+		<ul>
+			<li>The Post;</li>
+			<li>The Inverted Post;</li>
+			<li>The Horizontal Post;</li>
+			<li>And the Curling Area.</li>
+		</ul>
+		<p>
+			For more information about the different types of stations, refer to the <a href="/en/sections/game.html#godot">game's interactive explanation</a>.
+		</p>
+		<p>
+			Unfortunately, the interactive explanation does not cover the curling area, which is the most important station in the game.
+		</p>
+		<details class="nice_border details_with_images">
+			<summary>Curling Area</summary>
+			<div>
+				<div class="text_with_image_sidebar">
+					<p>
+						The Curling Area is the most unique, challenging, and <i>rewarding</i> station.
+					</p>
+					<p>
+						It consists of 4 concentric zones and a pole in the center. Robots are not allowed to enter this area.
+					</p>
+					<p>
+						PJs thrown into one of the zones are worth a specific number of points based on the zone: the closer to the center, the more points. The first GP thrown onto the central pole is worth <b>500 POINTS!!!</b> Each subsequent GP is worth fewer points: 400, 300, 200… down to 0.
+					</p>
+					<p>
+						The curling area is controlled by the team with the most GPs in the closest zone that contains at least one GP. For example, if the yellow team has 5 GPs in the 10-point zone and the blue team has 1 GP on the central pole, the blue team controls the curling area. If there is a tie, no team controls it.
+					</p>
+				</div>
+				<aside class="sidebar_image">
+					<img src="/images/curling.png">
+					<img src="/images/curling control.png">
+				</aside>
+			</div>
+		</details>
+		<p>
+			Check out the interactive explanation of the TakTik 2025 game to better understand this year's game.
+		</p>
+		<a id="godot" class="button_with_arrow" onclick="transition('../godot/godot.html?transition_direction=normal');">
+			Interactive explanation
+			<span class="arrow">></span>
+		</a>
+	</main>
+</body>
+</html>

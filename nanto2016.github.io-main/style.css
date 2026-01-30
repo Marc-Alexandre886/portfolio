@@ -1,0 +1,360 @@
+@font-face {
+	font-family: "Plot Holes";
+	src: url("/images/PlotHolesBB-Regular.otf");
+}
+
+@keyframes in {
+	0% {left: 0;}
+	100% {left: -100lvw;}
+}
+
+@keyframes out {
+	0% {left: 100lvw;}
+	100% {left: 0;}
+}
+
+@keyframes reverse_in {
+	0% {left: 0;}
+	100% {left: 100lvw;}
+}
+
+@keyframes reverse_out {
+	0% {left: -100lvw;}
+	100% {left: 0;}
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-image: url("/images/paper.png");
+	background-size: cover;
+	margin: 0;
+	line-height: 1.5;
+	font-family: "Plot Holes", sans-serif;
+	font-size: calc(15px + 0.390625lvw);
+}
+
+a {
+	cursor: pointer;
+}
+
+.journey_title {
+	text-align: center;
+}
+
+h1.journey_title {
+	margin-bottom: 0em;
+}
+
+blockquote {
+	margin-left: 0;
+	margin-right: 0;
+	font-style: italic;
+}
+
+.comic_grid {
+	background-color: black;
+	gap: 8px;
+	padding: 8px;
+	display: grid;
+	border: solid;
+	grid-template-areas: 
+		"september october  october"
+		"kickoff   kickoff  kickoff"
+		"november  december december"
+		"november  holidays holidays"
+		"january   january  january";
+}
+
+@media (orientation: portrait) {
+	.comic_grid {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.comic_cell {
+	background-color: white;
+	padding: 16px;
+}
+
+#september {
+	grid-area: september;
+	text-align: right;
+}
+
+#october {
+	grid-area: october;
+	text-align: left;
+}
+
+#kickoff {
+	grid-area: kickoff;
+	text-align: center;
+}
+
+#november {
+	grid-area: november;
+	text-align: center;
+}
+
+#december {
+	grid-area: december;
+	text-align: center;
+}
+
+#holidays {
+	grid-area: holidays;
+	text-align: center;
+}
+
+#january {
+	grid-area: january;
+	text-align: center;
+}
+
+#navbar {
+	background-image: linear-gradient(white 0%, white 75%, rgba(255, 255, 255, 0.9) 100%);
+	background-repeat: no-repeat;
+	position: sticky;
+	top: 0;
+	width: 100%;
+	min-height: 10svh;
+	padding: 1svh;
+	border: solid;
+	border-width: 0 0 1px 0;
+	border-color: black;
+	display: flex;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+}
+
+.section_link {
+	align-self: center;
+	border: outset;
+	border-width: 1px;
+	border-radius: 4px;
+	padding: 4px;
+	margin-left: 8px;
+	margin-top: 4px;
+	background-color: white;
+}
+
+header {
+	display: block;
+	height: 10svh;
+}
+
+@media (orientation: portrait) {
+	header {
+		display: none;
+	}
+}
+
+img {
+	align-self: center;
+	max-width: 100%;
+	max-height: 75svh;
+}
+
+hr {
+	width: 100%;
+}
+
+header > img {
+	height: 10svh;
+	width: auto;
+	align-self: center;
+}
+
+.id_card {
+	background-image: url("/images/id_card.png");
+	aspect-ratio: 5 / 2;
+	background-size: 100% 100%;
+	background-color: black;
+	border: solid;
+	border-color: black;
+	border-radius: 4px;
+	text-align: center;
+}
+
+
+.grid_item > h2 {
+	font-size: 120%;
+	text-align: center;
+}
+
+.nice_border {
+	width: fit-content;
+	border: outset;
+	border-width: 2px;
+	border-radius: 4px;
+	padding: 4px;
+	transition-property: height;
+}
+
+.nice_border[open] > summary {
+	margin-bottom: 8px;
+}
+
+.details_with_images[open] {
+	box-sizing: border-box;
+	width: 100%;
+}
+
+.details_with_images > div {
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+}
+
+.sidebar_image {
+	max-width: 50%;
+	margin: 16px;
+}
+
+.sidebar_image > img {
+	width: 100%;
+	height: auto;
+}
+
+.text_with_image_sidebar {
+	width: 50%;
+	flex-grow: 1;
+}
+
+@media (orientation: portrait) {
+	.details_with_images > div {
+		flex-direction: column;
+	}
+
+	.sidebar_image {
+		max-width: 100%;
+	}
+
+	.text_with_image_sidebar {
+		width: 100%;
+	}
+}
+
+.button_with_arrow {
+	display: flex;
+	width: fit-content;
+	border: outset;
+	border-width: 2px;
+	border-radius: 4px;
+	padding: 4px;
+	background-color: white;
+	transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+	gap: 8px;
+}
+
+.button_with_arrow:hover {
+	transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+	gap: 32px;
+}
+
+.arrow {
+	text-align: end;
+	margin: 0 4px;
+}
+
+.content_container {
+	display: flex;
+	flex-direction: column;
+	margin: 32px;
+	background-color: white;
+	border: solid;
+	border-color: grey;
+	border-width: 2px;
+	border-radius: 8px;
+	padding: 16px;
+}
+
+.grid_container {
+	margin: 32px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(calc(140px + 36%), 1fr));
+	gap: 48px;
+}
+
+.smaller_gap {
+	gap: 24px;
+	grid-template-columns: repeat(auto-fit, minmax(calc(100px + 30%), 1fr));
+}
+
+.grid_item {
+	padding: 8px 32px;
+}
+
+.transition {
+	position: fixed;
+	top: 0;
+	left: 100lvw;
+	transform: skew(0deg);
+	height: 100lvh;
+	background-color: black;
+	width: 100lvw;
+	z-index: 1;
+}
+
+.transition_in {
+	left: -100lvw;
+	animation-name: in;
+	animation-duration: 500ms;
+}
+
+.transition_reverse_in {
+	left: 100lvw;
+	animation-name: reverse_in;
+	animation-duration: 500ms;
+}
+
+.transition_out {
+	left: 0;
+	animation-name: out;
+	animation-duration: 500ms;
+}
+
+.transition_reverse_out {
+	left: 0;
+	animation-name: reverse_out;
+	animation-duration: 500ms;
+}
+
+#game_description {
+	background-color: dodgerblue;
+	box-shadow: 0 0 8px 8px dodgerblue;
+}
+
+#robot_description {
+	background-color: brown;
+	box-shadow: 0 0 8px 8px brown;
+}
+
+#programming_description {
+	background-color: coral;
+	box-shadow: 0 0 8px 8px coral;
+}
+
+#website_description {
+	background-color: green;
+	box-shadow: 0 0 8px 8px green;
+}
+
+#video_description {
+	background-color: crimson;
+	box-shadow: 0 0 8px 8px crimson;
+}
+
+#tutorial_description {
+	background-color: orchid;
+	box-shadow: 0 0 8px 8px orchid;
+}
+
+#kiosk_description {
+	background-color: cornflowerblue;
+	box-shadow: 0 0 8px 8px cornflowerblue;
+}

@@ -1,0 +1,47 @@
+body {
+	background-image: none;
+	background-color: #29050D;
+	color: white;
+	margin: 1em;
+	display: flex;
+	margin: 0;
+}
+
+.choices {
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
+	height: 100lvh;
+	width: 100lvw;
+}
+
+a {
+	text-decoration: none;
+	font-size: 32px;
+}
+
+.back {
+	position: absolute;
+	margin: 8px;
+}
+
+span {
+	font-size: 32px;
+}
+
+.line_break {
+	display: none;
+	width: 100%;
+}
+
+@media (orientation: portrait) {
+	span {
+		display: none;
+	}
+
+	.line_break {
+		display: block;
+	}
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/style.css">
+	<link rel="icon" type="image/png" href="/images/ST-EX.png">
+	<title>Robot - St-Ex</title>
+</head>
+<body>
+	<script>
+		var section_index = 2;
+	</script>
+	<div class="transition"></div>
+	<script src="/transition.js"></script>
+	<nav id="navbar"></nav>
+	<script src="/en/navbar.js"></script>
+	<main class="content_container">
+		<h1>The Robot</h1>
+		<p>Internal document - Do not share outside the Creative Industry.</p>
+		<hr>
+		<h2>Design Process</h2>
+		<p>
+			The robot's design process began on the bus ride back from the TakTik 2025 launch. The Creative Industry identified several key requirements:
+		</p>
+		<ol>
+			<li>A system is needed to pick up game pieces (GPs),</li>
+			<li>This same system must be able to place GPs in stations outside the curling zone,</li>
+			<li>The robot must be able to store up to 3 GPs at the same time,</li>
+			<li>The robot must be capable of throwing GPs at the Center Post.</li>
+		</ol>
+		<p>
+			We agreed that a claw would be the simplest way to pick up GPs and place them in stations. Additionally, a three-level claw should allow us to store 3 GPs at once and place them all in a station at the same time!
+		</p>
+		<img src="/images/pince.jpg" alt="Image of a claw concept drawing">
+		<p>
+			However, we still hadn't figured out how to throw GPs into the curling zone. After a quick search, we discovered that frisbee launchers use a spinning wheel to propel discs. This inspired the design for our claw prototype.
+		</p>
+		<p>
+			A few days after the launch, we made an important discovery: the robot's extension limits are almost enough for an arm to reach the Center Post. This means we could easily throw GPs at the Center Post with minimal missed throws! We decided to base the entire robot strategy on this idea.
+		</p>
+		<p>
+			That's when we encountered our first problem: for the arm to be long enough to reach the Center Post, we needed a small but heavy base and a very lightweight arm. However, placing a motor at the end of the arm, inside the claw, could make it too heavy! We considered several possible solutions:
+		</p>
+		<ul>
+			<li>Strengthen the arm and make the base heavier to install a power motor in the claw (but could the arm handle the extra weight?),</li>
+			<li>Replace the power motor with a lighter servo motor and add a speed-increasing system (but would the servo motor spin fast enough?),</li>
+			<li>Place the motor on the robot's base and transfer the rotation to a wheel in the claw (but how?),</li>
+			<li>Abandon the “frisbee launcher” system and replace it with a spring or elastic mechanism (but could this work without damaging the GPs or breaking the arm due to the spring's release?).</li>
+		</ul>
+		<p>
+			At the time of writing this document, we still haven't found a solution.
+		</p>
+		<h2>Final Robot Version</h2>
+		<p>
+			The robot is not ben yet built, so the concepts explained in this section may change before the competition.
+		</p>
+		<p>
+			The base uses mecanum wheels, which allow for omnidirectional movement. It is small, heavy, and sturdy to ensure stability when the arm extends.
+		</p>
+		<img src="/images/IMG_0710.jpg" alt="Picture of our robot prototypes">
+		<p>
+			The arm is made up of several strong yet lightweight 3D-printed parts, connected by servo motors that act as joints.
+		</p>
+		<p>
+			At the end of the arm is a claw capable of picking up 3 GPs at once. It is controlled by servo motors. Since the claw doesn't block the holes in the GPs, it can easily place them into stations. The claw is also equipped with a sort of crossbow to launch the bottom GP toward the Center Post.
+		</p>
+		<img src="/images/IMG_0711.jpg" alt="Picture of our robot prototypes">
+	</main>
+</body>
+</html>

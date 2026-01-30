@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Playpen";
+    src: url(../fonts/PlaypenSansHebrew-Regular.ttf);
+}
+
+body {
+    background-color: #81f4342d;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 0;
+}
+
+canvas{
+    margin: 0 auto;
+    border-radius: 10px;
+    image-rendering:pixelated;
+    cursor: url(../images/Green_orb_unabled.png), auto;
+    box-shadow: 0 0 10px #043e80;
+}
+
+canvas:active{
+    cursor: url(../images/Green_orb_enabled.png), auto;
+}

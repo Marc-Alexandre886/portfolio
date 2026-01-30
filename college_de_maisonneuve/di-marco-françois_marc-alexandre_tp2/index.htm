@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marc-Alexandre - TP2</title>
+    <link rel="icon" type="image/png" href="images/logo.jpg">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/formulaire.css">
+    <link rel="stylesheet" href="css/recherche.css">
+    <link rel="stylesheet" href="css/articles.css">
+    <link rel="stylesheet" href="css/galerie.css">
+    <link rel="stylesheet" href="css/video.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playwrite+DE+Grund:wght@100..400&family=Syne+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--Musique de fond de la page web-->
+    <audio autoplay>
+        <source src="audio/musique_de_fond.wav" type="audio/wav">
+    </audio>
+    <!--Accueil-->
+    <div class="hero" id="accueil">
+        <header class="hero__entete centre" id="header">
+            <div class="hero__barresup">
+                <img src="images/ff7_logo.png" alt="logo">
+                <figure class="img__sociaux">
+                    <img src="https://s2.svgbox.net/social.svg?ic=github" alt="Github" width="28" height="28">
+                    <img src="https://s2.svgbox.net/social.svg?ic=facebook&color=00f" alt="Facebook" width="28" height="28">
+                    <img src="https://s2.svgbox.net/social.svg?ic=stackoverflow&color=f00" alt="Stackoverflow" width="28" height="28">
+                    <img src="https://s2.svgbox.net/social.svg?ic=linkedin&color=00f" alt="LinkedIn" width="28" height="28">
+                    <img src="https://s2.svgbox.net/social.svg?ic=messenger&color=00f" alt="Messenger" width="28" height="28">
+                    <img src="https://s2.svgbox.net/social.svg?ic=discord&color=620062" alt="Discord" width="28" height="28">
+                </figure>
+                <form class="recherche">
+                    <input class="recherche__input" type="search" placeholder="Rechercher">
+                    <img class="recherche__img" src="https://s2.svgbox.net/hero-outline.svg?ic=search&color=000" width="20" height="20">
+                </form>
+            </div>
+            <div class="hero__menu">
+                <label class="navigation__bouton" for="chk-burger">
+                    <img src="https://s2.svgbox.net/hero-solid.svg?ic=menu&color=fff" width="64" height="64">
+                </label>
+                <input type="checkbox" id="chk-burger">
+                <nav class="navigation__menu">
+                    <a class="menu__a" href="#accueil">Accueil</a>
+                    <a class="menu__a" href="#inscription">Inscription</a>
+                    <a class="menu__a" href="#tableau">Tableau</a>
+                    <a class="menu__a" href="#developpement">Developpement</a>
+                    <a class="menu__a" href="#communaute">Communauté</a>
+                    <a class="menu__a" href="#video">Vidéos</a>
+                    <a class="menu__a" href="#galerie">Galerie</a>
+                    <a class="menu__a" href="#pied">Pied</a>
+                </nav>
+            </div>
+            <div>
+                <h1 class="hero__titre">Final Fantasy 7</h1>
+                <h2>Le septième jeu d’une saga légendaire</h2>
+                <p>
+                    Final Fantasy 7 est un jeu vidéo de «Square Enix» sorti le 31 janvier 1997 à l’origine sur la PlayStation1. Ce jeu vidéo est la suite, non chronologique, de la licence créée en 1987 par le premier Final Fantasy.
+                    Considérant qu’il s’agit d’un jeu vidéo au tour par tour, un RPG, cette aventure marquera les joueurs de cette licence par sa narration qui amènera vers sa popularité. Voici mes informations :
+                </p>
+                <ul>
+                    <li>Auteur : Marc-Alexandre Di Marco François</li>
+                    <li>TIM — Techniques d’intégration Multimedia</li>
+                    <li>Collège de Maisonneuve</li>
+                    <li class="a__espacement"><a class="a__bouton" href="https://github.com/Marc-Alexandre886/1W1-TP2" target="_blank">Adresse de la page GitHub</a></li>
+                    <li class="automne">Automne 2025</li>
+                    <li class="a__espacement"><a class="a__bouton" href="#inscription">Formulaire</a></li>
+                </ul>
+                <p>
+                    Dans la suite de cette page web, vous allez pouvoir vous inscrire dans la communauté de ce site. Ensuite nous verrons quelques statistiques de certains personnages iconiques.
+                    Pour la suite, vous verrez deux rédigées par moi, l’auteur, et quelques vidéos et images de cette licence à part entière.
+                </p>
+                <p>
+                    <b>Dans cette page vous pourriez vous déplacer par le menu en haut à droite ou en descendant. Bonne visite!</b>
+                </p>
+                </div>
+        </header>
+    </div>
+    <!--Inscription-->
+    <div class="Inscription" id="inscription">
+        <section class="Inscription__couleur centre">
+            <h2>Inscription</h2>
+            <form class="formulaire">
+                <div class="formulaire__div">
+                    <p>
+                        Ici se trouve le formulaire pour vous inscrire dans cette page. Aucun nouveau contenu ne sera rajouté, mais vous pourriez le faire afin de compléter des statistiques dans la base de données :
+                        Passez une excellente réponse au questionnaire!
+                    </p>
+                    <fieldset>
+                        <label class="formulaire__label" for="txt-nom">Nom</label>
+                        <input id="txt-nom" class="formulaire__text" type="text" placeholder="Entrez votre nom">
+                    </fieldset>
+                    <fieldset>
+                        <label class="formulaire__label" for="txt-prenom">Prénom</label>
+                        <input id="txt-prenom" class="formulaire__text" type="text" placeholder="Entrez votre prénom">
+                    </fieldset>
+                    <fieldset>
+                        <label class="formulaire__label" for="txt-couriel">Courriel</label>
+                        <input id="txt-couriel" class="formulaire__text" type="email" placeholder="Entrez votre couriel">
+                    </fieldset>
+                    <fieldset>
+                        <label class="formulaire__label" for="txt-age">Âge</label>
+                        <input id="txt-age" class="formulaire__text" type="text" placeholder="Entrez votre âge">
+                    </fieldset>
+                </div>
+                <fieldset>
+                    <legend>Appréciation du jeu</legend>
+                    <label>Incroyable jeu vidéo <input type="radio" name="rad-abonemment"></label>
+                    <label>Jeu vidéo moyen <input type="radio" name="rad-abonemment"></label>
+                    <label>Mauvais jeu vidéo <input type="radio" name="rad-abonemment"></label>
+                </fieldset>
+                <fieldset>
+                    <legend>Appréciation de la communauté</legend>
+                    <label>Sublime communauté <input type="radio" name="rad-abonemment"></label>
+                    <label>Communauté moyenne<input type="radio" name="rad-abonemment"></label>
+                    <label>Mauvaise communauté <input type="radio" name="rad-abonemment"></label>
+                </fieldset>
+                <input type="submit" value="Valider">
+            </form>
+        </section>
+    </div>
+    <!--Tableau-->
+    <div class="statistiques">
+        <section class="Tableau centre" id="tableau">
+            <table>
+                <caption>Tableau des statistiques des personnages au niveau 60</caption>
+                <thead>
+                    <tr>
+                        <td>Personnages</td>
+                        <td>Points de vie</td>
+                        <td>Points de magie</td>
+                        <td>Points d’attaque</td>
+                        <td>Points de défense</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Cloud Strife</td>
+                        <td>4846 PV à 5144 PV</td>
+                        <td>537 PM à 571 PM</td>
+                        <td>84 à 91 points d’attaque</td>
+                        <td>73 à 80 points de défense</td>
+                    </tr>
+                    <tr>
+                        <td>Barret Wallace</td>
+                        <td>5423 PV à 5753 PV</td>
+                        <td>476 PM à 505 PM</td>
+                        <td>78 à 85 points d’attaque</td>
+                        <td>83 à 90 points de défense</td>
+                    </tr>
+                    <tr>
+                        <td>Tifa Lockheart</td>
+                        <td>4592 PV à 4861 PV</td>
+                        <td>495 PM à 527 PM</td>
+                        <td>73 à 80 points d’attaque</td>
+                        <td>66 à 73 points de défense</td>
+                    </tr>
+                    <tr>
+                        <td>Aerith Gainsbourg</td>
+                        <td>4415 PV à 4715 PV</td>
+                        <td>589 PM à 625 PM</td>
+                        <td>59 à 66 points d’attaque</td>
+                        <td>64 à 71 points de défense</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <td>Source : <blockquote> « <a href="https://finalfantasy.fandom.com/wiki/Final_Fantasy_VII_stats">Final Fantasy wiki</a> » </blockquote></td>
+                </tfoot>
+            </table>
+        </section>
+    </div>
+    <!--Article de la création du jeu-->
+    <div class="creation">
+        <section class="article__flex developpement centre" id="developpement">
+            <article>
+                <div class="article__contenu">
+                    <h1>Avant le développement du jeu-vidéo - contexte historisque</h1>
+                    <p>
+                        En 1987 sort le permier final fantasy, l’entreprise Square Enix étant en difficulté jugeait que si ce jeu était un échec commercial, cela signifierait que l’entreprise fermerait ses portes, mais cela n’en sera jamais le cas.
+                        En effet, jusqu’en 1994, plus de six opus au total seront comptés pour ce qui peut être considéré comme une licence. Les jeux les plus marquants vers cette époque et que, même en ce jour est l’un des plus populaires sont Final Fantasy 4 et Final Fantasy 6.
+                        Dans ces moments, l’entreprise avait sorti leur dernier jeu sur la Super Nintendo Entertainement System de Nintendo inc. et la venue de la prochaine console de Nintendo arrivait à grands pas : La Nindendo 64.
+                    </p>
+                </div>
+                <figure class="ordre__inverse article__galerie">
+                    <img src="images/ff7_image_n64.png" alt="equipe de dévelopemment du jeu">
+                    <figcaption>La Nintendo 64</figcaption>
+                </figure>
+            </article>  
+            <article>
+                <div class="article__contenu">
+                    <h1>Avant le développement du jeu-vidéo - premier prototype</h1>
+                    <p>
+                        Les développeurs se lancent à la base sur une suite de Final Fantasy 6 et ils réussissent à en créer un prototype de combat en 3 d, mais ils avaient estimé que leurs ambitions étaient trop grandes pour cette console.
+                        C’était ainsi que Sony, qui se lance sur le marché du jeu vidéo, propose à cette entreprise de créer leur jeu dans leur prochaine console : La PlayStation1.
+                        Chaque disque, pourrait contenir 660 méga-octets contre au plus 64 méga-octets du côté de Nintendo, Square Enix a pris la décision de les rejoindre.
+                    </p>
+                </div>
+                <figure class="article__galerie">
+                    <img src="images/ff6_image.jpg" alt="image du jeu vidéo final fantasy 6">
+                    <figcaption>Final Fantasy 6</figcaption>
+                </figure>
+            </article> 
+            <article>
+                <div class="article__contenu"> 
+                    <h1>Pendant le développement</h1>
+                    <p>
+                        Ce fut ainsi que le développement du jeu commença réellement et dura environ une année. L’entreprise a dû aussi s’adapter à une technologie émergente des consoles dans ces périodes : la 3D.
+                        Pour le système de combat, l’équipe de développement crée les matérias. Les matérias sont des sphères, pouvant être équipés sur le combattant de le faire augmenter ses statistiques.
+                    </p>
+                    <p>
+                        Voici une liste de quelques membres importants du développement de ce jeu vidéo :
+                        <ul>
+                            <li><b>Producteur : </b> Hironobu Sakaguchi</li>
+                            <li><b>Directeur : </b> Yoshinori Kitase</li>
+                            <li><b>Un des artistes : </b> Tetsuya Nomura</li>
+                            <li><b>Le scénariste : </b> Kazushige Nojima</li>
+                        </ul>
+                    </p>
+                </div>
+                <figure class="ordre__inverse article__galerie">
+                    <img width="100" src="images/ff7_image_equipe.jpg" alt="equipe de dévelopemment du jeu">
+                    <figcaption>Équipe de développement du jeu</figcaption>
+                </figure>
+            </article>
+        </section>
+    </div>
+    <!--Article de la communauté du jeu-->
+    <div class="Joueurs">
+        <section class="article__flex communaute centre" id="communaute">
+            <article>
+                <div class="article__contenu">
+                    <h1>La communauté</h1>
+                    <p>
+                        La communauté de cette licence est très présente. Elle parle toujours de ce jeu plusieurs années après sa première publication
+                        et les joueurs essayent de toujours aider les novices dans leur futur grand voyage à travers des tutoriels, des articles et des astuces
+                        comme la majorité des tutoriels invitent les joueurs à aller recruter des combattants secrets comme Yuffie ou Vincent dans le jeu originel.
+                    </p>
+                    <p>
+                        Voici une liste de ressources que je recommanderais aux novices du jeu original pour en y voire le bout ou pour les aider au besoin :
+                        <ul>
+                            <li>
+                                <a href="https://www.youtube.com/watch?v=yzipZL98ooQ&list=PLbChG-61Dve19LbkmtL476y6P0C1oZZm9">Une série d’un joueur y jouant en français</a>
+                                <blockquote> «<a href="https://www.youtube.com/@SuperBrioche666">SuperBrioche - Let's Play - VOD Twitch</a>» </blockquote>
+                            </li>
+                            <li>
+                                <a href="https://www.supersoluce.com/soluce/final-fantasy-vii/cheminement">Solution complète du jeu en français</a>
+                                <blockquote> «<a href="https://www.supersoluce.com/">SuperSoluce</a>» </blockquote>
+                            </li>
+                            <li>
+                                <a href="https://www.reddit.com/r/FinalFantasyVII/">Communauté Reddit du jeu en anglais</a>
+                                <blockquote> « <a href="https://www.reddit.com/">Reddit</a> » </blockquote>
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+                <figure class="article__galerie">
+                    <img width="100" src="images/ff7_images_meme_quetes.jpg" alt="Meme de la communauté en lien avec une photo">
+                    <figcaption>Meme de la communauté en lien avec une quête secondaire</figcaption>
+                </figure>
+            </article>
+            <article>
+                <div class="article__contenu">
+                    <h1>Les ventes de la licence</h1>
+                    <p>
+                       Voici trois des jeux de la licence ff7 qui se sont vendus le mieux. Mes informations viennent de la page internet :
+                        <blockquote> «<a href="https://www.senscritique.com/liste/top_des_ventes_mondiales_des_jeux_final_fantasy/2034787?page=1">Sens critique</a>» </blockquote>
+                    </p>
+                    <ul>
+                        <li>1er : <b>Final Fantasy 7</b> : 14,14 millions de ventes</li>
+                        <li>2e : <b>Final Fantasy 7 : Remake</b> : 8,7 millions de ventes</li>
+                        <li>3e : <b>Crisis Core : Final Fantasy 7</b> : 3,9 millions de ventes</li>
+                    </ul>
+                </div>
+                <figure class="ordre__inverse article__galerie">
+                    <img width="100" src="images/ff7_images_meme_ventes.jpg" alt="meme des ventes de ff7 Rebirth">
+                    <figcaption>Un meme en rapport avec les ventes du dernier jeu sorti</figcaption>
+                </figure>
+            </article>
+        </section>
+    </div>
+    <!--Vidéos-->
+    <div class="bande_annonce">
+        <section class="Videos centre" id="video">
+            <h1>Vidéos</h1>
+            <p>
+                Afin d’obtenir le meilleur confort possible, nous vous recommendons de mettre la vidéo en pleine écran.
+            </p>
+            <video width="300" controls>
+                <source src="videos/demo_jeu_originel.mp4" type="video/mp4">
+            </video>
+            <video width="300" controls>
+                <source src="videos/trailler_ff7_remake.mp4" type="video/mp4">
+            </video>
+            <video width="300" controls>
+                <source src="videos/trailler_crisis_core-reunion.mp4" type="video/mp4">
+            </video>
+            <video width="300" controls>
+                <source src="videos/trailler_ff7_rebirth.mp4" type="video/mp4">
+            </video>
+        </section>
+    </div>
+    <!--Galerie d’images-->
+    <div class="phototheque">
+        <section class="Galerie centre" id="galerie">
+            <h1>Galerie</h1>
+            <figure class="galerie__figure">
+                <a href="images/gallery1.jpg">
+                    <img src="images/gallery1.jpg" alt="Combatans remake">
+                    <figcaption>Combatans remake</figcaption>
+                </a>
+                <a href="images/gallery2.jpg">
+                    <img src="images/gallery2.jpg" alt="fin remake">
+                    <figcaption>Fin remake</figcaption>
+                </a>
+                <a href="images/gallery3.jpg">
+                    <img src="images/gallery3.jpg" alt="combat rebirth">
+                    <figcaption>Combat rebirth</figcaption>
+                </a>
+                <a href="images/gallery4.jpg">
+                    <img src="images/gallery4.jpg" alt="Zack Fair">
+                    <figcaption>Zack Fair</figcaption>
+                </a>
+                <a href="images/gallery5.jpg">
+                    <img src="images/gallery5.jpg" alt="Pochette du jeu originelle">
+                    <figcaption>Pochette du jeu originelle</figcaption>
+                </a>
+                <a href="images/gallery6.jpg">
+                    <img src="images/gallery6.jpg" alt="Pochette de Dirge of Cerberus">
+                    <figcaption>Pochette de Dirge of Cerberus</figcaption>
+                </a>
+                <a href="images/gallery7.jpg">
+                    <img src="images/gallery7.jpg" alt="Pochette du jeu crisis core originale">
+                    <figcaption>Pochette du jeu crisis core originale</figcaption>
+                </a>
+                <a href="images/gallery8.jpg">
+                    <img src="images/gallery8.jpg" alt="Pochette du jeu Remake">
+                    <figcaption>Pochette du jeu Remake</figcaption>
+                </a>
+                <a href="images/gallery9.jpg">
+                    <img src="images/gallery9.jpg" alt="Pochette du jeu Crisis Core Reunion">
+                    <figcaption>Pochette du jeu Crisis Core Reunion</figcaption>
+                </a>
+                <a href="images/gallery10.jpg">
+                    <img src="images/gallery10.jpg" alt="Pochette du jeu Rebirth">
+                    <figcaption>Pochette du jeu Rebirth</figcaption>
+                </a>
+                <a href="images/gallery11.jpg">
+                    <img src="images/gallery11.jpg" alt="Livre en lien avec les personnages">
+                    <figcaption>Livre en lien avec les personnages</figcaption>
+                </a>
+                <a href="images/gallery12.jpg">
+                    <img src="images/gallery12.jpg" alt="Livre en lien avec deux personnages féminins">
+                    <figcaption>Livre en lien avec deux personnages féminins</figcaption>
+                </a>
+            </figure>
+        </section>
+    </div>
+    <!--Pied de la page-->
+    <div class="fin">
+        <footer class="pied centre" id="pied">
+            <h1 class="pied__enfant">Final Fantasy 7</h1>
+            <p class="pied__enfant">
+                En bref, ce jeu vidéo a pu permettre, dans l’internationale, de faire découvrir aux utilisateurs de la PlayStation1,
+                l’un des jeux les plus célèbres dans le genre du tour par tour et du genre vidéoludique, dans son ensemble.
+            </p>
+            <ul class="bibliographie">
+                <li><h3>Bibliographie des images du fond des sections</h3></li>
+                <li><a href="https://www.youtube.com/watch?v=eTJDJGXrSl4&list=PLFAC04AA2B8A98151">Musique de fond de la page</a></li>
+                <li><a href="https://www.facebook.com/CollegeMaisonneuve/photos/a.119333412002/10153382186857003/">Image du logo</a></li>
+                <li><a href="https://www.thegamer.com/crisis-core-final-fantasy-7-reunion-shop-unlock-help/">Image de l'accueil</a></li>
+                <li><a href="https://ici.radio-canada.ca/nouvelle/2010526/final-fantasy-rebirth-state-of-play-sony-resident-evil">Image de l'inscription</a></li>
+                <li><a href="https://global.techradar.com/fr-fr/gaming/ps5/final-fantasy-vii-rebirth-date-de-sortie-gameplay-et-dernieres-nouvelles">Image du tableau</a></li>
+                <li><a href="https://screenrant.com/final-fantasy-characters-iconic-scenes/">Image de l'article du développement</a></li>
+                <li><a href="https://www.nintendo.com/au/games/nintendo-switch/final-fantasy-vii/?srsltid=AfmBOoo7VEPjSVIkmy8dClt5UhcubyFVcvt3z7sDlG8AB9RTlYE7OL48">Image de l'article des joueurs</a></li>
+                <li><a href="https://www.keengamer.com/articles/reviews/ps4-reviews/final-fantasy-vii-remake-review-a-great-remake-but-not-perfect/">Image de la section des vidéos</a></li>
+                <li><a href="https://gamerant.com/final-fantasy-7-remake-part-3-development-update-status-plot/">Image de la section de la galerie</a></li>
+                <li><a href="https://www.reddit.com/r/JRPG/comments/18v05by/final_fantasy_vii_rebirth_how_square_enix_is/?tl=fr">Image du pied de page</a></li>
+            </ul>
+            <ul class="bibliographie">
+                <li><h3>Bibliographie des images des articles</h3></li>
+                <li><a href="https://en.wikipedia.org/wiki/Nintendo_64">Première image de l'article du développement</a></li>
+                <li><a href="https://na.finalfantasy.com/news/1926">Deuxième image de l'article du développement</a></li>
+                <li><a href="https://www.reddit.com/r/FinalFantasyVII/comments/wvz6gq/february_1997_interview_with_final_fantasy_viis/">Troisième image de l'article du développement</a></li>
+                <li><a href="https://www.reddit.com/r/FinalFantasy/comments/14pjxv7/finished_ff7_for_the_1st_time_made_some_memes_as/ ">Première image de l'article de la communauté</a></li>
+                <li><a href="https://www.facebook.com/groups/2081728788801328/posts/3078631922444338/">Deuxième image de l'article de la communauté</a></li>
+            </ul>
+            <ul class="bibliographie">
+                <li><h3>Bibliographie des vidéos</h3></li>
+                <li><a href="https://www.youtube.com/watch?v=4OsHKVKPXEc">Vidéo en haut à gauche</a></li>
+                <li><a href="https://www.youtube.com/watch?v=LtuqmZp1Ku0/">Vidéo en haut à droite</a></li>
+                <li><a href="https://www.youtube.com/watch?v=nubNEm8ybcg">Vidéo en bas à gauche</a></li>
+                <li><a href="https://www.youtube.com/watch?v=PyCzqn6rgnQ">Vidéo en bas à droite</a></li>
+            </ul>
+            <ul class="bibliographie">
+                <li><h3>Bibliographie des images de la galerie</h3></li>
+                <li><a href="https://gamecardsdirect.com/de-en/news/why-is-the-remake-of-final-fantasy-7-better/">Première image de la galerie</a></li>
+                <li><a href="https://www.square-enix-games.com/en_US/news/pax-east">Deuxième image de la galerie</a></li>
+                <li><a href="https://finalfantasy.fandom.com/wiki/Ninja_Carbine">Troisième image de la galerie</a></li>
+                <li><a href="https://www.ign.com/articles/final-fantasy-7-rebirth-ending-explained">Quatrième image de la galerie</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Final_Fantasy_VII">Cinquième image de la galerie</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/File:Dirgeofcerberususbox.jpg">Sixième image de la galerie</a></li>
+                <li><a href="https://www.historiquedesjeuxvideo.com/galerie_jeu.php?page=0&code=10288">Septième image de la galerie</a></li>
+                <li><a href="https://www.amazon.ca/-/fr/Final-Fantasy-VII-Remake-PlayStation/dp/B00ZS80PC2">Huitième image de la galerie</a></li>
+                <li><a href="https://www.qisahn.com/products/final-fantasy-vii-crisis-core-reunion-2?srsltid=AfmBOorWjeoJRGfz4dXonVQVlAvaqDjMMqau2lPCx4yoIk5pYMyQv57z">Neuvième image de la galerie</a></li>
+                <li><a href="https://www.amazon.ca/-/fr/Final-Fantasy-7-Rebirth-PS5/dp/B0CH1XTC52/ref=sr_1_1?adgrpid=1355700358597719&dib=eyJ2IjoiMSJ9.qol3f3Wjg_ANNI2kHP5aQJcLNlnmE6d_pBah-OzC3wZVCivbG5K_ObCtKyP17eSzWlfGAkvyIEm_KCAOHMGomCmJnpzFb7ab60qtcNkezTwoK9ry4KOezFrRP8CHHr8PStsFLR4tDOMggDIqe5_ImqgxxjoClanuxYjes6zDkBeWYCgCE5Dp9y_XhcnVMxEty9Wn-SBqSKOdbmQ46g_bfj8Xre_f2usQ2tsIIrGrXvqwk_Q3sE-lBhFAuPr1Bv9h.7AqeCcf3h-98mAEZblL0sKmsASj-GhEycIBWGLI1DDQ&dib_tag=se&hvadid=84731672805672&hvbmt=be&hvdev=c&hvlocphy=124933&hvnetw=o&hvqmt=e&hvtargid=kwd-84732421459401%3Aloc-32&hydadcr=22432_13498409&keywords=ff7+rebirth+amazon&mcid=67e8cceca5fc343cbabb00113cdbcd94&msclkid=bcd4a7aa9d0113152d7cce9074583bf8&qid=1765468506&sr=8-1">Dixième image de la galerie</a></li>
+                <li><a href="https://www.amazon.ca/Final-Fantasy-VII-Way-Smile/dp/1975382358">Onzième image de la galerie</a></li>
+                <li><a href="https://www.amazon.ca/Final-Fantasy-VII-Remake-Traces-ebook/dp/B09TVPJJPH">Douxième image de la galerie</a></li>
+            </ul>
+            <ul class="pied__enfant">
+                <li><h3>Le collège de Maisonneuve</h3></li>
+                <li><a href="https://www.cmaisonneuve.qc.ca/" target="_blank">Site du collège</a></li>
+                <li><a href="https://www.cmaisonneuve.qc.ca/programme/integration-multimedia" target="_blank">Techniques d'intégration Multimedia</a></li>
+                <li><a href="https://www.google.com/maps/place/Coll%C3%A8ge+de+Maisonneuve/@45.550865,-73.5558744,17z/data=!3m1!4b1!4m 6!3m5!1s0x4cc91bf5bacbeffd:0x68ff300997eff5c!8m2!3d45.5508613!4d-73.5532995!16zL20vMDU3dHFx?entry=ttu&g_ep=EgoyMDI1MTEyMy4xIKXMDSoASAFQAw%3D%3D" target="_blank">3800, R. Sherbrooke E, Montréal, QC H1X 2A2</a></li>
+            </ul>
+            <figure class="img__sociaux">
+                <img src="https://s2.svgbox.net/social.svg?ic=github" alt="Github" width="28" height="28">
+                <img src="https://s2.svgbox.net/social.svg?ic=facebook&color=00f" alt="Facebook" width="28" height="28">
+                <img src="https://s2.svgbox.net/social.svg?ic=stackoverflow&color=f00" alt="Stackoverflow" width="28" height="28">
+                <img src="https://s2.svgbox.net/social.svg?ic=linkedin&color=00f" alt="LinkedIn" width="28" height="28">
+                <img src="https://s2.svgbox.net/social.svg?ic=messenger&color=00f" alt="Messenger" width="28" height="28">
+                <img src="https://s2.svgbox.net/social.svg?ic=discord&color=620062" alt="Discord" width="28" height="28">
+            </figure>
+            <a class="pied__enfant" href="#header">Retourner à l’aceuil</a>
+            <cite class="pied__enfant">Avis de confidentialité | Privacy notice</cite>
+        </footer>
+    </div>
+</body>
+</html>

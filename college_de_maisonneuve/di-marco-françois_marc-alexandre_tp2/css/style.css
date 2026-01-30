@@ -1,0 +1,274 @@
+/* Règles généraux */
+
+*{
+    box-sizing: border-box;
+}
+html {
+    font-size: 14px;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, caption{
+    margin: 0;
+    padding: 10px 0;
+    font-family: "Playwrite DE Grund", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+p, li, tr{
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: justify;
+}
+
+section, header, footer{
+    min-height: 100vh;
+}
+
+.centre{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: #ffffff75;
+}
+
+ul, li{
+    padding: 0; 
+    margin: 0;
+    list-style: none; 
+    line-height: 1.5;
+}
+
+figure{
+    margin: 0;
+    padding: 0;
+}
+
+/* Section hero */
+
+.hero{
+    background: linear-gradient(to bottom, transparent 80%, black 100%), url("../images/ff7_fond_acceuil.jpg");
+    background-position: 50%;
+    background-size: cover;
+}
+
+.hero > .centre{
+    background-color: #ffc6c6ad;
+}
+
+.hero__barresup{
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.hero__entete{
+    padding-top: 20px;
+}
+
+.hero__titre{
+    color: #fff;
+    font-size: clamp(1rem, 5vw, 3rem);
+}
+
+.automne{
+    color: #cf6f00;
+}
+
+.a__bouton{
+    border-radius: 5px;
+    padding: 5px 5px;
+    color: #00000094;
+    text-decoration: none;
+    background-color: #ffffffb7;
+}
+
+.a__bouton:hover{
+    color: #000;
+    background-color: #fff;
+}
+
+.a__espacement{
+   margin: 15px 0; 
+}
+
+/* section de l'inscription */
+
+.Inscription{
+    background: linear-gradient(to bottom, transparent 80%, black 100%), url("../images/ff7_fond_inscription.jpg");
+    background-position: 50%;
+    background-size: cover;
+}
+
+.Inscription > .centre{
+    background-color: #bcfdbcad;
+    color: #31ffff;
+}
+
+/* Section du tableau */
+
+.statistiques{
+    background: linear-gradient(to bottom, transparent 80%, black 100%), url("../images/ff7_fond_tableau.jpg");
+    background-position: 50%;
+    background-size: cover;
+}
+
+.statistiques > .centre{
+    background-color: #00FFFFad;
+    color: #98fc98;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+    height: 60vh;
+    border: 1px dotted #31bdb6;
+}
+
+tr, td, th{
+    color: #000;
+    border: 1px solid #111d25;
+    font-size: clamp(0.5rem, 1vw, 1.1rem);
+    padding: 5px;
+    text-align: left;
+}
+
+th{
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: bold;
+}
+
+caption{
+    padding: 10px;
+    font-size: 2rem;
+}
+
+tbody tr:nth-of-type(odd){
+    background-color: #ff000075;
+}
+
+tbody tr:nth-of-type(even){
+    background-color: #2cc7729d;
+}
+
+tfoot{
+    border: none;
+}
+
+/* Sections des articles */
+
+.creation{
+    background: linear-gradient(to bottom, transparent 80%, black 100%), url("../images/ff7_fond_article1.jpg");
+    background-position: 50%;
+    background-size: cover;
+}
+
+.creation > .centre {
+    background-color: #6585b4ad;
+    color: #e5a3ff;
+}
+
+
+.Joueurs {
+    background: linear-gradient(to bottom, transparent 80%, black 100%), url("../images/ff7_fond_article2.jpg");
+    background-position: 50%;
+    background-size: cover;
+}
+
+.Joueurs > .centre{
+    background-color: #d77afcad;
+    color: #bcd7ff;
+}
+
+/* section de la vidéo */
+
+.bande_annonce > .centre{
+    background-color: #ff5353ad;
+    color: #7676ff;
+}
+
+.bande_annonce{
+    background: linear-gradient(to bottom, transparent 80%, black 100%), url("../images/ff7_fond_video.jpg");
+    background-position: 50%;
+    background-size: cover;
+}
+
+/* section de la galerie */
+
+.phototheque > .centre{
+    background-color: #4f4fffad;
+    color: #ff8585;
+}
+
+.phototheque{
+    background: linear-gradient(to bottom, transparent 80%, black 100%), url("../images/ff7_fond_galerie.jpg");
+    background-position: 50%;
+    background-size: cover;
+}
+
+/* section pied de page */
+
+.fin{
+    background: linear-gradient(to top, transparent 80%, black 100%), url("../images/ff7_fond_pied.jpg");
+    background-position: 50%;
+    background-size: cover;
+}
+
+.fin > .centre{
+   background-color: #6d325ead;
+}
+
+.pied{
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.pied__enfant{
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 50%;
+}
+
+.pied__enfant, .pied h3, .pied a{
+    text-decoration: none;
+    padding: 2px;
+    color: #dbc7dd;
+}
+
+.bibliographie{
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 250px;
+}
+
+.pied a:hover{
+    color: rgba(48, 48, 255, 0.5);
+    background-color: #adffcfad;
+    border-radius: 5px;
+    transform: scale(1.1);
+}
+
+.img__sociaux{
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(5px, 4vw, 100px);
+    justify-content: center;
+    width: 100%;
+}
+
+.img__sociaux img:hover{
+    background-color: #ffffff50;
+    border-radius: 5px;
+}

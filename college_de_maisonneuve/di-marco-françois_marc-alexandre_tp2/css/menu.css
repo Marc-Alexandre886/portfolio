@@ -1,0 +1,67 @@
+/* section du menu */
+
+.navigation__bouton{
+    position: fixed;
+    top: 0;
+    right: 170px;
+}
+
+
+.hero__menu a{
+    display: inline-block;
+    padding: 5px;
+    background-color: rgb(224, 151, 61);
+    text-decoration: none;
+    margin: 5px 5px;
+    color: #fff;
+    border-radius: 10px;
+}
+
+#chk-burger{
+   display: none; 
+}
+
+.hero__menu{
+    position: fixed;
+    z-index: 1;
+    top: 70px;
+    right: 170px;
+    text-align: right;
+}
+
+.navigation__menu{
+    background-color: #000000a2;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.navigation__menu{
+    transform: translateX(250%);
+    transition: transform 400ms linear;
+}
+
+.navigation__menu a{
+    display: block;
+    text-decoration: none;
+    background-color: #ffffff1e;
+    text-align: center;
+    padding: 5px;
+    color: #64bb5c;
+    font-size: clamp(10px, 4vh, 24px);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transform: scale(1);
+}
+
+.navigation__menu a:hover{
+    color: #010e04c7;
+    transform: scale(1.1);
+}
+
+.navigation__menu a:active{
+    color: #010e04c7;
+    transform: scale(1.05);
+}
+
+#chk-burger:checked ~ .navigation__menu{
+    transform: translateX(35%);
+}

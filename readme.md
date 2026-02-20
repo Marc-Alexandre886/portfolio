@@ -1,6 +1,6 @@
 # Lecteurs Français
 
-- Lien LinkedIn : https://www.linkedin.com/in/marc-alexandre-di-marco-fran%C3%A7ois/
+- Lien LinkedIn : https://www.linkedin.com/in/marc-alexandre-di-marco-francois
 - Lien Behance : https://www.behance.net/m-admf
 
 - Page GitHub du projet web au Collège : https://marc-alexandre886.github.io/1W1-TP2/
@@ -10,7 +10,7 @@
 
 # English readers
 
-- LinkedIn link : https://www.linkedin.com/in/marc-alexandre-di-marco-fran%C3%A7ois/
+- LinkedIn link : https://www.linkedin.com/in/marc-alexandre-di-marco-francois
 - Behance link : https://www.behance.net/m-admf
 
 - GitHub web project page for College : https://marc-alexandre886.github.io/1W1-TP2/

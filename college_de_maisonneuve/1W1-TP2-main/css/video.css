@@ -1,0 +1,15 @@
+.Videos video{
+    position: relative;
+    right: 30px;
+    filter: blur(1px) opacity(0.9);
+    transform: scale(0.8);
+    transition: filter 500ms;
+    transition: transform 500ms;
+}
+
+.Videos video:hover{
+    filter: none;
+    transform: scale(0.85);
+    transition: filter 500ms;
+    transition: transform 500ms;
+}

@@ -1,0 +1,43 @@
+/* Section de la galerie */
+
+.galerie__figure{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.galerie__figure img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.galerie__figure figcaption{
+    text-align: center;
+    padding: 2px;
+    color: #000   
+}
+
+.galerie__figure figcaption:hover {
+    color: rgba(48, 48, 255, 0.5);
+    background-color: #adffcfad;
+    border-radius: 5px;
+}
+
+.galerie__figure a{
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 170px;
+    text-decoration: none;
+    filter: blur(1px) opacity(0.9);
+    transform: scale(1);
+    transition: filter 500ms;
+    transition: transform 500ms;
+}
+
+.galerie__figure a:hover{
+    filter: none;
+    transform: scale(1.2);
+    transition: filter 500ms;
+    transition: transform 500ms;
+}

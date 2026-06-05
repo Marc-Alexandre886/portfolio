@@ -1,0 +1,189 @@
+/* Règle de style pour les animation CSS */
+
+
+/* Section logo */
+
+@keyframes survol_logo {
+    from {
+        background-color: #e6e6e6b7;
+        filter: hue-rotate(0deg);
+    }
+
+    50% {
+        background-color: #e6e6e6;
+        filter: hue-rotate(10deg);
+    }
+
+    to {
+       background-color: #e6e6e6b7;
+       filter: hue-rotate(0deg);
+    }
+}
+
+/* Section menu */
+
+@keyframes menu_ouvert {
+    from {
+        translate: -150% 0;
+    }
+
+    to {
+        translate: 0 0;
+    }
+}
+
+@keyframes menu_fermer {
+    from {
+        translate: 0 0;
+    }
+
+    to {
+        translate: -150% 0;
+    } 
+}
+
+/* Section acceuil */
+
+@keyframes btn_animer {
+    from {
+        transform: scale(0.9);
+        border: 0.125rem solid var(--accent);
+        box-shadow: none;
+        color: var(--bleu);
+    }
+
+    50% {
+        transform: scale(1);
+        border: 0.125rem solid var(--bleu);
+        color: var(--accent);
+    }
+
+    to {
+        transform: scale(0.9);
+        border: 0.125rem solid var(--accent);
+        box-shadow: none;
+        color: var(--bleu);
+    }
+}
+
+/* Section Créateur */
+
+@keyframes survol_profil {
+    from {
+        border: 0.313rem solid transparent;
+        filter: hue-rotate(0deg);
+    }
+
+    25% {
+        border: 0.313rem solid var(--accent);
+        filter: hue-rotate(25deg);
+    }
+
+    to {
+        border: 0.313rem solid transparent;
+        filter: hue-rotate(0deg);
+    }
+}
+
+/* Section arcade */
+
+@keyframes flou_retirer {
+    from {
+        filter: hue-rotate(5deg);
+    }
+
+    to {
+        filter: none;
+    }
+}
+
+@keyframes flou_arcade {
+    from {
+        filter: none;
+    }
+
+    to {
+        filter: hue-rotate(5deg);
+    }
+}
+
+@keyframes voir_plus {
+    from {
+        border: 0.125rem dotted var(--accent);
+        background-color: initial;
+    }
+
+    50% {
+        background-color: var(--noir-transparent);
+        border: 0.125rem dotted var(--blanc);
+    }
+
+    to {
+        border: 0.125rem dotted var(--accent);
+        background-color: initial;
+    }
+}
+
+/* Section commentaires */
+
+@keyframes bordure_utilisateurs {
+    from {
+        border: 0.126rem solid transparent;
+    }
+
+    to {
+        border: 0.126rem solid var(--blanc);
+    }
+}
+
+@keyframes utilisateurs {
+    from {
+        border: 0.126rem solid var(--blanc);
+    }
+
+    to {
+        border: 0.126rem solid transparent;
+    }
+}
+
+/* Section infos */
+
+@keyframes contact_survol {
+    from {
+        color: var(--accent);
+    }
+
+    to {
+        color: var(--tuile-menu);
+    }
+}
+
+@keyframes contact {
+    from {
+        color: var(--tuile-menu);
+    }
+
+    to {
+        color: var(--accent);
+    }
+}
+
+@keyframes bordure_reseaux {
+    from {
+        border: 0.126rem solid transparent;
+    }
+
+    to {
+        border: 0.126rem solid var(--blanc);
+    }
+}
+
+@keyframes reseaux {
+    from {
+        border: 0.126rem solid var(--blanc);
+    }
+
+    to {
+        border: 0.126rem solid transparent;
+    }
+}

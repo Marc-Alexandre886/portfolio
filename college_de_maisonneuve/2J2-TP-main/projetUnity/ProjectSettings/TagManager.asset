@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 3
+  tags:
+  - visuelJeu
+  - N1V0
+  - N1V1
+  - N1V2
+  - N1V3
+  - N1V4
+  - ExpNv1
+  - jouer
+  - quitter
+  - ExpNv3
+  - ExpNv2
+  - boiteAJouet
+  - N2V1
+  - N2V2
+  - N2V3
+  - N3Vs
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - DetectionTrains
+  - Water
+  - UI
+  - Gestionnaire
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  m_RenderingLayers:
+  - Default

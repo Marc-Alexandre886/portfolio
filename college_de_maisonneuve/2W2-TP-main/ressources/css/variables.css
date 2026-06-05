@@ -1,0 +1,38 @@
+/* Règles de style pour les variables CSS */
+
+:root {
+    /* Couleurs de la maquette */
+    
+    --accent : #61e294;
+    --bleu-fonce: #2f6394;
+    --bleu-pale: #4c87c2;
+    --beige-fonce: #d9a654;
+    --beige-pale: #dbad63;
+    --mauve: #c142b0;
+    --noir: #0d0106;
+    --blanc: #f5f5f5;
+    --bg-menu: #386fa4;
+    --tuile-menu: #8ddbad;
+    --noir-transparent: #0000005a;
+
+    /* 
+        Variables d'espacement (padding et margin) 
+        Uniquement pour les valeurs en %, car elles sont les plus fréquentes. 
+        Sinon j'utiliserais les rem ou le vw afin de respecter le plus possible les paramètres de l'utilisateur.
+    */
+
+    --miniscule-espacement: 0.25%;
+    --tres-petit-espacement: 2%;
+    --petit-espacement: 3%;
+    --moyen-espacement: 5%;
+    --grand-espacement: 10%;
+    --tres-grand-espacement: 80%;
+
+    /* Variables pour la grandeur de la police (grandeure commune) */
+
+    --grandeure-police: 1.2rem;
+    --grandeure-police-tres-petit: 0.75rem;
+    --grandeure-police-petit: 1.25rem;
+    --grandeure-police-moyen: 1.4rem;
+    --grandeure-police-grand: 2rem;
+}

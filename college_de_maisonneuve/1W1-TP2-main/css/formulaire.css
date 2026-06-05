@@ -1,0 +1,27 @@
+.formulaire fieldset{
+    margin: 15px 20px;
+    border: 1px dotted #00000020;
+    font-family: "Syne Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.formulaire__div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+label [type = "radio"]{
+    position: relative;
+}
+
+input{
+    padding: 5px 0;
+    width: 100%;
+    background-color: #adadad9f;
+}
+
+input:hover{
+    background-color: #adadad;
+}

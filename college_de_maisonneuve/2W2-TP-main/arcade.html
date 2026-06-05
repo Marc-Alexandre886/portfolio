@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="ressources/images/favicon.webp" type="image/x-icon">
+    <link rel="stylesheet" href="ressources/css/normalize.css">
+    <link rel="stylesheet" href="ressources/css/variables.css">
+    <link rel="stylesheet" href="ressources/css/style.css">
+    <link rel="stylesheet" href="ressources/css/animations.css">
+    <script src="ressources/data/arcade.js"></script>
+    <script src="ressources/js/script.js" defer></script>
+    <title>Télé-Québec - Nettoyer sa chambre</title>
+</head>
+
+<body>
+    <!-- Section header -->
+
+    <header>
+        <!-- Logo -->
+
+        <nav class="logo">
+            <a href="index.html">
+                <img src="ressources/images/logo.webp" alt="Logo">
+            </a>
+        </nav>
+        <!-- Menu principal -->
+        
+        <input type="checkbox" id="chk-menu">
+        <label class="burger" for="chk-menu">
+            <img src="ressources/images/bouton_burger.webp" alt="Bouton du Menu">
+        </label>
+        <nav class="retour">
+            <a href="#arcade">Arcade</a>
+            <a href="#infos">Infos</a>
+            <a class="vers_acceuil" href="index.html">Acceuil</a>
+        </nav>
+        <!-- Barre de recherche -->
+
+        <div class="recherche-jeu">
+            <input type="search" name="mot-cle" placeholder="Recherchez dans toute l'arcade un mot">
+        </div>
+    </header>
+    <!-- Section principale -->
+
+    <main class="principal">
+        <!-- Section arcade -->
+         
+        <section class="arcade" id="arcade">
+            <h1>Autres créations</h1>
+            <div class="contenu_arcade"></div>
+            <p class="aucun_element rien">Aucun jeu disponible selon la recherche. Cliquez ici pour réinialiser la recherche ou appuyer sur le « X » de la barre de recherche.</p>
+            <div class="retour_haut">
+                <a class="voir-plus" href="#arcade">Retourner au début de la page de l'arcade</a>
+            </div>
+        </section>
+    </main>
+    <!-- Pied de page -->
+
+    <footer class="infos" id="infos">
+        <div>
+            <ul>
+                <li>Informations sur le créateur : <a href="index.html#createur">cliquez ici</a></li>
+                <li>Adresse courriel : <a href="mailto:dimarcoc88@gmail.com">dimarcoc88@gmail.com</a></li>
+                <li>Première année au niveau collégial</li>
+            </ul>
+            <ul>
+                <li>Nom du professeur : <a href="https://www.linkedin.com/in/csemaan/" target="_blank">Camille Semaan</a></li>
+                <li>Nom du cours : 2W2-Animation et interactivité web</li>
+                <li>Cette page web est dans le cadre du travail pratique du cours en hiver 2026.</li>
+            </ul>
+        </div>
+        <figure>
+            <figure>
+                <a href="https://www.linkedin.com/in/marc-alexandre-di-marco-francois" target="_blank">
+                    <img class="icones" src="ressources/images/linkedin.webp" alt="LinkedIn">
+                </a>
+            </figure>
+            <figure>
+                <a href="https://github.com/Marc-Alexandre886/portfolio" target="_blank">
+                    <img class="icones" src="ressources/images/github.webp" alt="GitHub">
+                </a>
+            </figure>
+            <figure>
+                <a href="https://www.behance.net/m-admf" target="_blank">
+                    <img class="icones" src="ressources/images/behance.webp" alt="Behance">
+                </a>
+            </figure>
+        </figure>
+        <cite>&copy; 2026 TIM</cite>
+    </footer>
+
+    <!-- Gabarit pour la section de l'arcade -->
+
+    <template id="gabarit_arcade">
+        <a class="tuile" href="GITHUBPAGE" target="_blank">
+            <article>
+                <h2>TITRE</h2>
+                <h3 id="auteur">AUTEUR</h3>
+                <p class="groupe">Groupe : GROUPE</p>
+                <figure>
+                    <img src="ressources/images/arcade/SRC" alt="Vignette de TITRE">
+                </figure>
+                <ul></ul>
+                <p>DESCRIPTION</p>
+            </article>
+        </a>
+    </template>
+</body>
+</html>

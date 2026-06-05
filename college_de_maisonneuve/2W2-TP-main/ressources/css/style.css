@@ -1,0 +1,891 @@
+/* Variables CSS => voir : « variables.css » */
+
+/* Règles de style généraux pour la police */
+
+@font-face {
+    font-family: schoolbell;
+    src: url(../fonts/Schoolbell-Regular.ttf);
+}
+
+/* Règles de style généraux */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: schoolbell;
+    background-color: var(--bleu-pale);
+}
+
+a {
+    color: var(--bleu-fonce);
+    text-decoration: none;
+}
+
+figure, img, ul, li, p, cite {
+    padding: 0;
+    margin: 0;    
+}
+
+h3 {
+    font-size: var(--grandeure-police-moyen);
+
+    &:not(.tuile) {
+        color: var(--accent);
+    }
+}
+
+h2 {
+    color: var(--accent);
+}
+
+img {
+    width: 100%;
+    object-fit: contain;
+    border-radius: 0.625rem;
+}
+
+ul, li {
+    list-style: none;
+}
+
+.accueil, footer  {
+    padding-top: var(--petit-espacement);
+    background-color: var(--bleu-pale);
+}
+
+.mon-titre {
+    line-height: 1.35;
+    color: var(--accent);
+    padding-top: var(--moyen-espacement);
+}
+
+/* Règles de style pour l'ajout de classe en JavaScript */
+
+.pointer{
+    pointer-events: none;
+}
+
+body.overflow{
+    overflow-y: hidden;
+}
+
+.menu.ouvert {
+    animation: menu_ouvert 1s 1;
+}
+
+.menu.fermer {
+    animation: menu_fermer 1s 1;
+}
+
+.retour.ouvert {
+    animation: menu_ouvert 1s 1;
+}
+
+.retour.fermer {
+    animation: menu_fermer 1s 1;
+}
+
+.tuile.pascouleur {
+    animation: flou_retirer 500ms 1;
+}
+
+
+.tuile.couleur {
+    animation: flou_arcade 500ms 1;
+}
+
+.arcade > .rien, .infos.rien {
+    display: none;
+}
+
+/* Section Logo */
+
+.logo {
+    z-index: 3;
+    width: 10%;
+    height: 10%;
+    position: fixed;
+    right: 0;
+    top: 2.5rem;
+    
+
+    img {
+        padding: var(--moyen-espacement);
+        border-radius: 0.625rem;
+        background-color: #e6e6e6b7; 
+
+        &:hover {
+            animation: survol_logo 1.5s infinite;
+        }
+    }
+}
+
+/* Section Menu principal */
+
+#chk-menu {
+    display: none;
+    pointer-events: none;
+}
+
+.burger {
+    display: inline-flex;
+    flex-direction: column;
+    position: fixed;
+    right: 0.625rem;
+    z-index: 1;
+}
+
+.menu {
+    padding-right: var(--moyen-espacement);
+    background-color: var(--bg-menu);
+    display: flex;
+    flex-direction: column;
+    max-width: 100vw;
+    max-height: 100%;
+    position: fixed;
+    top: 0.625rem;
+    translate: -150% 0;
+    z-index: 1;
+    pointer-events: none;
+
+    a {
+        padding: var(--petit-espacement);
+        text-align: center;
+        font-size: var(--grandeure-police-grand);
+        border-left: 0.063rem solid var(--tuile-menu);
+        border-right: 0.063rem solid var(--tuile-menu);
+        background: var(--tuile-menu);
+        width: 110%;
+        margin: 0.625rem 0;
+        color: var(--bleu-fonce);
+        text-decoration: none;
+
+        &:hover {
+            border-bottom: 0.25rem solid var(--beige-fonce);
+        }
+    }
+
+    .vers_arcade {
+        background-color: var(--beige-pale);
+        border-left: 0.063rem solid var(--beige-pale);
+        border-right: 0.063rem solid var(--beige-pale);
+
+        &:hover {
+            border-bottom: 0.25rem solid var(--tuile-menu);
+        }
+    }
+}
+
+.retour {
+    padding-right: var(--moyen-espacement);
+    background-color: var(--bg-menu);
+    display: flex;
+    flex-direction: column;
+    max-width: 100vw;
+    max-height: 100%;
+    position: fixed;
+    top: 0.625rem;
+    translate: -150% 0;
+    z-index: 2;
+    pointer-events: none;
+
+    a {
+        width: 10rem;
+        margin: var(--moyen-espacement) 0;
+        text-align: center;
+        font-size: var(--grandeure-police-grand);
+        border-left: 0.063rem solid var(--tuile-menu);
+        border-right: 0.063rem solid var(--tuile-menu);
+        background: var(--tuile-menu);
+        color: var(--bleu-fonce);
+        text-decoration: none;
+
+        &:hover {
+            border-bottom: 0.25rem solid var(--beige-fonce);
+        }
+    }
+
+    .vers_acceuil {
+        background-color: var(--beige-pale);
+        border-left: 0.063rem solid var(--beige-pale);
+        border-right: 0.063rem solid var(--beige-pale);
+
+        &:hover {
+            border-bottom: 0.25rem solid var(--tuile-menu);
+        }
+    }
+}
+
+.menu, .menu a, .retour, .retour a {
+    border-radius: 0.313rem;
+}
+
+#chk-menu:checked ~ .menu {
+    translate: 0 0;
+    pointer-events: auto;
+}
+
+#chk-menu:checked ~ .retour {
+    translate: 0 0;
+    pointer-events: auto;
+}
+
+/* Section recherche pour l'arcade */
+
+.recherche-jeu {
+    position: fixed;
+    left: 0.4rem;
+    z-index: 1;
+    width: 75%;
+    margin-top: 0.4rem;
+    border-radius: 0.63rem;
+    background-color: #ffffff;
+}
+
+.recherche-jeu input {
+    width: 100%;
+    height: 1.75rem;
+    background-color: transparent;
+    border: none;
+
+    &::placeholder {
+        font-size: var(--grandeure-police-petit);
+    }
+
+    &:focus {
+        color: var(--bleu-fonce);
+    }
+
+    &:read-write {
+        font-size: var(--grandeure-police-petit);
+    }
+}
+
+/* Section acceuil */
+
+.accueil {  
+    h3 {
+        color: var(--beige-pale);
+    }
+
+    figcaption {
+        color: var(--beige-pale);
+        padding-left: var(--tres-grand-espacement);
+    }
+
+    div {
+        padding-left: var(--petit-espacement);
+    }
+
+    .btn-appel {
+        margin-bottom: var(--petit-espacement);
+        background-color: var(--beige-pale);
+        border-radius: 0.625rem;
+        width: 12rem;
+        border: 0.125rem solid var(--accent);
+        transform: scale(0.9);
+        
+        a {
+            font-size: var(--grandeure-police-moyen);
+            color: var(--bleu-fonce);
+        }
+
+        &:hover {
+            animation: btn_animer 500ms infinite;
+        }
+    }
+}
+
+/* Style des sections */
+
+.principal > section {
+    background-color: var(--bleu-pale);
+    color: var(--beige-fonce);
+    padding: var(--tres-petit-espacement);
+    border-top: 0.125rem solid var(--bleu-fonce);
+
+    &:nth-child(2n - 1) {
+        background-color: var(--beige-pale);
+        color: var(--bleu-fonce);
+
+        h2, h3 {
+            color: var(--bleu-fonce);
+        }
+    }
+}
+
+/* Section à propos */
+
+.apropos {
+    article {
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between; 
+       align-items: center;
+
+       & > * {
+        padding: 0 var(--petit-espacement);
+       }
+    }
+
+    .separateur {
+        padding-top: var(--grand-espacement);
+    }
+
+    p {
+        padding: var(--petit-espacement) var(--grand-espacement);
+    }
+}
+
+/* Section mécaniques */
+
+.mecaniques section {
+    border: none;
+}
+
+.ordre_inverse figure {
+    order: 1;
+}
+
+.disposition_mecanique {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    article {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        
+        & > * {
+            padding: var(--moyen-espacement) var(--petit-espacement);
+        }
+    }   
+}
+
+/* Section créateur */
+
+.mon-nom {
+    color: var(--bleu-fonce);
+}
+
+.createur {
+    section {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        border: none;
+
+        & ul, figure {
+            flex-grow: 2;
+            flex-shrink: 0;
+            flex-basis: 50%;
+        }
+
+        .moi {
+            align-content: center;
+
+            li {
+                margin: var(--grand-espacement) var(--moyen-espacement);
+
+                &:first-child {
+                    margin-top: var(--petit-espacement);
+                }
+            }
+        }
+
+        .profil_linkedin img {
+            padding-bottom: var(--grand-espacement);
+            transform: scale(0.50);
+            border-radius: 50%;
+            border: 0.313rem solid transparent;
+
+            &:hover {
+                animation: survol_profil 1.5s infinite;
+            }
+        }
+    }
+}
+
+/* Section de l'arcade et des vedettes */
+
+.vedettes > div:last-child {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    width: 20rem;
+    margin-top: var(--petit-espacement);
+    padding: var(--tres-petit-espacement) 0;
+    border: 0.125rem dotted var(--accent);
+    background-color: initial;
+
+    .voir-plus {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        color: var(--accent);
+    }
+
+    &:hover {
+        animation: voir_plus 1s infinite;
+    }
+}
+
+.retour_haut {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    color: var(--beige-pale);
+    font-size: var(--grandeure-police);
+    margin-top: var(--petit-espacement);
+    padding: var(--petit-espacement) 0;
+    border: 0.125rem dotted var(--accent);
+    background-color: initial;
+
+    .voir-plus {
+        cursor: pointer;
+        color: var(--accent);
+    }
+
+    &:hover {
+        animation: voir_plus 1s infinite;
+    }
+}
+
+.aucun_element {
+    cursor: pointer;
+    margin: 0 auto;
+    width: 75%;
+    padding: var(--tres-petit-espacement);
+    border: 0.188rem dotted var(--accent);
+    color: var(--beige-fonce);
+    font-size: var(--grandeure-police-moyen);
+
+    &:hover {
+        animation: voir_plus 1s infinite;
+    }
+}
+
+#arcade {
+    background-color: var(--bleu-pale);
+}
+
+.arcade h1 {
+    padding-top: var(--moyen-espacement);
+    color: var(--accent);
+}
+
+.contenu_arcade {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(20rem, 1fr));
+    gap: 0.5rem;
+}
+
+.tuile {
+    background-color: var(--beige-fonce);
+    filter: hue-rotate(5deg);
+    padding: 1rem;
+
+    &:hover {
+        filter: none;
+    }
+
+    .groupe {
+        padding-bottom: var(--tres-petit-espacement);
+        color: var(--bleu-pale);
+        font-size: var(--grandeure-police-petit);
+    }
+
+    h2 {
+        color: var(--bleu-fonce);
+        font-size: var(--grandeure-police-grand);
+    }
+
+    #auteur {
+        color: var(--bleu-pale);
+        font-size: var(--grandeure-police-moyen);
+    }
+
+    ul > li {
+        font-size: var(--grandeure-police-moyen);
+        color: var(--bleu-pale);
+        padding: var(--tres-petit-espacement) 0;
+    }
+
+    p:last-child {
+        font-size: var(--grandeure-police-petit);
+    }
+
+    & > * {
+        padding: 0.2rem 0;
+    }
+}
+
+/* Section avis */
+
+.avis {
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        color: var(--accent);
+    }
+
+    article {
+        border-top: 0.188rem dotted var(--bleu-pale);
+        padding: var(--moyen-espacement) 0;
+        display: flex;
+        flex-direction: row;
+        margin: var(--tres-petit-espacement) 0;
+
+        figure > figcaption {
+            font-size: var(--grandeure-police-moyen);
+        }
+
+        figure > img {
+            border: 0.126rem solid transparent;
+            border-radius: 1.26rem;
+            animation: utilisateurs 500ms 1;
+
+            &:hover {
+                border: 0.126rem solid var(--blanc);
+                animation: bordure_utilisateurs 500ms 1;
+            }
+        }
+
+        p {
+            align-content: center;
+            font-size: var(--grandeure-police);
+            line-height: 2;
+        }
+        
+        & > * {
+            padding: 0 1vw;
+        }
+
+        .disposition_note {
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            max-width: 3.125rem;
+        }
+    }
+
+    & > article:last-child {
+        border-bottom: 0.188rem dotted var(--bleu-pale);
+    }
+
+    .ordre_inverse_avis {
+        figure {
+            order: 1;
+        }
+        
+        figcaption, p {
+            color: var(--mauve);
+        }
+    }
+}
+
+/* Section infos */
+
+.infos { 
+    padding: 0 var(--petit-espacement);
+
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        ul {
+            color: var(--beige-fonce);
+            display: flex;
+            flex-direction: column;
+            padding: 0 var(--moyen-espacement);
+            margin: var(--moyen-espacement);
+            border: 0.188rem dotted var(--beige-pale);
+        }
+
+        li {
+            padding: 0.625rem 0;
+
+            a {
+                color: var(--accent);
+                animation: contact 100ms 1;
+
+                &:hover {
+                    color: var(--tuile-menu);
+                    animation: contact_survol 100ms 1;
+                }
+            }
+        }
+    }
+
+    figure {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        figure {
+            margin: 0 0.5rem;
+            flex: 0, 1, 33%;
+            border: 0.126rem solid transparent;
+            border-radius: 1.26rem;
+            animation: reseaux 500ms 1;
+
+            &:hover {
+                border: 0.126rem solid var(--blanc);
+                animation: bordure_reseaux 500ms 1;
+            }
+        }
+    }
+
+    cite {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--beige-pale);
+        padding: var(--tres-petit-espacement);
+    }
+}
+
+/* Animations => voir fichier : « animation.css » */
+
+
+/*  
+    Responsive : Seul endroit du code ou les px sont utilisé. 
+    Les requêtes media sont en px par convention. Donc, je les convertiras pas en rem. 
+*/
+
+@media (width >= 768px) {
+
+    /* Section du logo */
+
+    .logo {
+        padding: var(--tres-petit-espacement);
+    }
+
+    /* Section du menu */
+
+    .burger {
+        display: none;
+    }
+
+    .menu {
+        width: 85%;
+        height: 5%;
+        padding: 0;
+        right: 0.1rem;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        translate: 0;
+        pointer-events: auto;
+
+        a {
+            text-align: center;
+            width: 12%;
+            height: 5%;
+            padding: clamp(0.25rem, 1vh + 0.5rem, var(--petit-espacement)) 0;
+            margin: 0 var(--minuscule-espacement);
+            font-size: clamp(0.5rem, 1vw + 0.75rem, 1.5rem);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .retour {
+        width: 50%;
+        height: 5%;
+        padding: 0;
+        right: 0.25rem;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        translate: 0;
+        pointer-events: auto;
+
+        a {
+            text-align: center;
+            width: 90%;
+            height: 5%;
+            padding: clamp(0.25rem, 1vh + 0.5rem, var(--petit-espacement)) 0;
+            margin: 0 var(--petit-espacement);
+            font-size: clamp(0.5rem, 1vw + 0.75rem, 1.5rem);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    /* Section recherche pour l'arcade */
+
+    .recherche-jeu {
+        top: 0.5rem;
+        width: 45%;
+        margin-top: 0.4rem;
+        border-radius: 0.63rem;
+        background-color: #ffffff;
+    }
+
+    .recherche-jeu input {
+        height: 2rem;
+
+        &::placeholder {
+            font-size: var(--grandeure-police);
+            padding-left: 0.3rem;
+        }
+
+        &:read-write {
+            font-size: var(--grandeure-police);
+            padding-left: 0.3em;
+        }
+    }
+
+    /* Main */
+
+    section h2 {
+        padding-top: var(--tres-petit-espacement);
+    }
+    
+    /* Section à propos */
+
+    .apropos {
+        font-size: var(--grandeure-police);
+
+        & article {
+            padding-top: var(--tres-petit-espacement);
+            
+            & > * {
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: 50%;
+            }
+        }
+
+        .separateur {
+            padding: var(--tres-petit-espacement);
+        }
+
+        p {
+            padding: var(--tres-petit-espacement) var(--petit-espacement);
+        }
+    }
+
+
+    /* Section mécaniques */
+
+    .mecaniques {
+        font-size: var(--grandeure-police);
+
+        .disposition_mecanique {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            article {
+                padding: 0;
+                height: 15.625rem;
+
+                img {
+                    max-height: 15.625rem;
+                }
+            }
+        }
+    }
+
+    /* Section créateur */
+
+    .createur {
+        font-size: var(--grandeure-police);
+
+        section {
+            flex-direction: row;
+            align-content: center;
+        }
+
+        li {
+            padding: 0 var(--petit-espacement);
+        }
+
+        figure {
+            align-self: center;
+
+            figcaption {
+                display: block;
+            }
+        }
+    }
+
+    /* Section arcade */
+
+    .contenu_arcade {
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    }
+
+    .retour_haut {
+        margin-top: var(--grand-espacement);
+        padding: var(--tres-petit-espacement) 0;
+    }
+
+    .aucun_element {
+        max-width: 45%;
+    }
+    
+    .arcade {
+        gap: 1.5rem;
+    }
+
+    .voir-plus {
+        font-size: var(--grandeure-police-grand);
+    }
+
+    /* Section avis */
+
+    .avis { 
+        article {
+            padding: var(--petit-espacement) 0;
+            justify-content: flex-start;
+
+            p {
+                font-size: var(--grandeure-police-grand);
+            }
+            
+            .disposition_note {
+                padding: 0;
+            }
+        }
+
+        .ordre_inverse_avis {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+
+    /* Section footer */
+
+    .infos div {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        ul {
+            margin: var(--tres-petit-espacement);
+        }
+    }
+
+    li {
+        font-size: 1.5rem;
+    }
+
+    .icones{
+        height: 5rem;
+    }
+
+    cite {
+        font-size: var(--grandeure-police-moyen);
+    }
+}

@@ -13,7 +13,7 @@
 
 - Page GitHub du site web rédigé pour la compétition TakTik 2025 (Ce dépôt ne vient pas de moi) : https://nanto2016.github.io/
 
-## Autres
+## Autres liens
 
 - Lien LinkedIn : https://www.linkedin.com/in/marc-alexandre-di-marco-francois
 - Lien Behance : https://www.behance.net/m-admf
@@ -35,7 +35,7 @@
 
 - Taktik 2025 web site redacted GitHub page (This repositorie don't come from me) : https://nanto2016.github.io/
 
-## Others
+## Other links
 
 - LinkedIn link : https://www.linkedin.com/in/marc-alexandre-di-marco-francois
 - Behance link : https://www.behance.net/m-admf
